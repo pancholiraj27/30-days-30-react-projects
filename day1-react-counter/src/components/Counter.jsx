@@ -2,15 +2,13 @@ import React, { useState } from "react";
 
 const Counter = () => {
   const [counterValue, setCounterValue] = useState(0);
-  const [customIncDecValue, setCustomIncDecValue] = useState(1);
-
   const onDecrementBtn = () => {
     console.log("on BTN DECREMENT");
-    setCounterValue(counterValue - customIncDecValue);
+    setCounterValue(counterValue - 1);
   };
   const onIncrementBtn = () => {
     console.log("on BTN INCREMENT");
-    setCounterValue(counterValue + customIncDecValue);
+    setCounterValue(counterValue + 1);
   };
 
   return (
@@ -20,9 +18,8 @@ const Counter = () => {
         <h2>{counterValue}</h2>
         <input
           type="number"
-          name="customValue"
           min={1}
-          value={customIncDecValue}
+          value={counterValue}
           onChange={(e) => setCustomIncDecValue(parseInt(e.target.value))}
         />
         <div className="buttons">
