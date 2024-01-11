@@ -16,12 +16,6 @@ const Counter = () => {
       <h1>React Counter</h1>
       <div className="counterContainer">
         <h2>{counterValue}</h2>
-        <input
-          type="number"
-          min={1}
-          value={counterValue}
-          onChange={(e) => setCustomIncDecValue(parseInt(e.target.value))}
-        />
         <div className="buttons">
           <button onClick={onDecrementBtn}>-</button>
           <button onClick={onIncrementBtn}>+</button>
